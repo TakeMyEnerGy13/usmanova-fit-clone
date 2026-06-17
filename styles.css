@@ -225,6 +225,7 @@ img { max-width: 100%; display: block; }
 .prog:hover { border-color: var(--pink); transform: translateY(-3px); }
 .prog--flagship { border: 2px solid var(--pink); }
 .prog__media { background: var(--media-bg); }
+.prog__media--white { background: #fff; }
 .prog__media img { width: 100%; height: 280px; object-fit: contain; object-position: center bottom; }
 .prog__body { padding: 22px; display: flex; flex-direction: column; align-items: flex-start; gap: 12px; }
 .badge {
