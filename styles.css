@@ -122,6 +122,7 @@ img { max-width: 100%; display: block; }
 /* ============ Hero ============ */
 .hero { padding: 36px 0 0; overflow: hidden; }
 .hero__inner { display: flex; flex-direction: column; gap: 8px; }
+.hero__content { text-align: center; }
 .hero__title {
   font-size: clamp(28px, 8vw, 46px);
   font-weight: 800;
@@ -139,7 +140,7 @@ img { max-width: 100%; display: block; }
 }
 .hero__lead {
   color: var(--text-soft);
-  margin-top: 20px;
+  margin: 20px auto 0;
   max-width: 460px;
   font-size: 16px;
 }
@@ -390,7 +391,8 @@ img { max-width: 100%; display: block; }
   .hero { padding: 56px 0 0; }
   .hero .container { max-width: 1240px; }
   .hero__inner { flex-direction: row; align-items: center; justify-content: space-between; gap: 20px; }
-  .hero__content { flex: 0 1 44%; }
+  .hero__content { flex: 0 1 44%; text-align: left; }
+  .hero__content .hero__lead { margin-left: 0; margin-right: 0; }
   .hero__media { flex: 1 1 56%; justify-content: flex-end; }
   .hero__media img { width: 100%; max-width: 640px; height: auto; }
 
