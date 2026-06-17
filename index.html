@@ -9,20 +9,35 @@
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
   <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;700;800&display=swap" rel="stylesheet" />
   <link rel="stylesheet" href="styles.css" />
+  <script>
+    // apply saved theme before paint to avoid flash
+    (function () {
+      try {
+        var t = localStorage.getItem("theme");
+        if (t === "dark") document.documentElement.setAttribute("data-theme", "dark");
+      } catch (e) {}
+    })();
+  </script>
 </head>
 <body>
+  <button class="theme-toggle" id="themeToggle" aria-label="Переключить тему" title="Светлая / тёмная тема">
+    <span class="theme-toggle__icon theme-toggle__icon--sun" aria-hidden="true">☀</span>
+    <span class="theme-toggle__icon theme-toggle__icon--moon" aria-hidden="true">☾</span>
+  </button>
+
   <!-- ============ HERO ============ -->
   <header class="hero">
     <div class="container hero__inner">
       <div class="hero__content">
-        <h1 class="hero__title">Приведите тело<br />в форму с чемпионкой<br />Катей Усмановой</h1>
+        <h1 class="hero__title">Приведите тело<br />в форму с<br />чемпионкой<br />Катей Усмановой</h1>
         <p class="hero__subtitle">без диет, голода и запретов<br />с пользой для здоровья</p>
         <p class="hero__lead">Похудеть, подтянуть попу и живот, набрать форму в зале, восстановиться после родов — тренировки и питание под вашу цель</p>
         <button class="btn btn--primary btn--lg" data-open-form>Выбрать программу</button>
         <p class="hero__note">Для корректной работы сайта отключите VPN</p>
       </div>
       <div class="hero__media">
-        <img src="assets/hero.png" alt="Катя Усманова" width="488" height="568" />
+        <img class="hero__img hero__img--light" src="assets/hero.png" alt="Катя Усманова" width="975" height="1134" />
+        <img class="hero__img hero__img--dark" src="assets/hero_dark.png" alt="Катя Усманова" width="1400" height="1400" />
       </div>
     </div>
   </header>
@@ -65,14 +80,14 @@
       <div class="card proof__card">
         <p class="proof__lead">580 000+ учениц. Подкасты. Статьи в СМИ. Коллаборации с звёздами.</p>
         <div class="proof__grid">
-          <figure class="tile"><img src="assets/trainer1.png" alt="" loading="lazy" /><figcaption class="tile__cap">Коллаборации со звёздами</figcaption></figure>
-          <figure class="tile"><img src="assets/prog3.png" alt="" loading="lazy" /><figcaption class="tile__cap">«В любой непонятной ситуации — приседай»</figcaption></figure>
-          <figure class="tile"><img src="assets/prog4.png" alt="" loading="lazy" /><figcaption class="tile__cap">Подкаст «Мама фитнес-бикини»</figcaption></figure>
-          <figure class="tile"><img src="assets/prog1.png" alt="" loading="lazy" /><figcaption class="tile__cap">Статья «Бикини, которое приносит миллионы»</figcaption></figure>
+          <figure class="tile"><img src="assets/press_tnt.png" alt="Катя Усманова на ТНТ" loading="lazy" /></figure>
+          <figure class="tile"><img src="assets/press_prisedai.png" alt="«В любой непонятной ситуации — приседай»" loading="lazy" /></figure>
+          <figure class="tile"><img src="assets/press_podcast.png" alt="Подкаст «Мама фитнес-бикини»" loading="lazy" /></figure>
+          <figure class="tile"><img src="assets/press_article.png" alt="Статья «Бикини, которое приносит миллионы»" loading="lazy" /></figure>
         </div>
       </div>
 
-      <button class="btn btn--primary btn--block" data-open-form>Вернуть форму</button>
+      <button class="btn btn--primary btn--block btn--lg" data-open-form>Вернуть форму</button>
     </div>
   </section>
 
